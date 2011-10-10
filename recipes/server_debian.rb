@@ -41,7 +41,7 @@ template "#{node[:postgresql][:dir]}/postgresql.conf" do
 end
 
 service "postgresql" do
-  service_name "postgresql-#{node.postgresql.version}"
+  service_name "postgresql"
   supports :restart => true, :status => true, :reload => true
   action :nothing
 end
